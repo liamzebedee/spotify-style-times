@@ -1,0 +1,46 @@
+{
+  "scripts": {
+    "build": "babel src -d lib",
+    "start": "nodemon src/index.js --exec yarn build",
+    "example": "yarn run babel-node src/example.js"
+  },
+  "dependencies": {
+    "moment": "^2.22.1",
+    "underscore": "^1.9.0"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-umd"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.17.5"
+  },
+  "name": "spotify-style-times",
+  "description": "Generate Spotify-style timestamps like '5m' and '3h'. Always selects the most minimalist approximation of the time (ie. largest unique unit of time).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/liamzebedee/spotify-style-times.git"
+  },
+  "keywords": [
+    "times",
+    "dates",
+    "formatting"
+  ],
+  "author": "liamzebedee",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/liamzebedee/spotify-style-times/issues"
+  },
+  "homepage": "https://github.com/liamzebedee/spotify-style-times#readme"
+}
