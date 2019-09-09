@@ -2,7 +2,8 @@
   "scripts": {
     "build": "babel src -d lib",
     "start": "nodemon src/index.js --exec yarn build",
-    "example": "yarn run babel-node src/example.js"
+    "example": "yarn run babel-node src/example.js",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "moment": "^2.22.1",
@@ -23,8 +24,8 @@
   },
   "name": "spotify-style-times",
   "description": "Generate Spotify-style timestamps like '5m' and '3h'. Always selects the most minimalist approximation of the time (ie. largest unique unit of time).",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.1.0",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
